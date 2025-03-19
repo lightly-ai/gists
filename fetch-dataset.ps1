@@ -15,9 +15,8 @@ New-Item -ItemType Directory -Path "$TARGET_FOLDER" -Force | Out-Null
 # Download and extract dataset
 Invoke-WebRequest -Uri $DATASET_URL -OutFile "roboflow.zip"
 Expand-Archive -Path "roboflow.zip" -DestinationPath "$TARGET_FOLDER" -Force
-#Remove-Item "roboflow.zip"
+Remove-Item "roboflow.zip"
 
-# Detect OS and modify `data.yaml` paths
 $DATA_YAML = "$TARGET_FOLDER\data.yaml"
 if (Test-Path $DATA_YAML) {
     # Windows PowerShell equivalent of `sed`
