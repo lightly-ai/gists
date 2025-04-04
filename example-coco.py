@@ -14,7 +14,7 @@ dataset_path = os.getenv("DATASET_PATH")
 
 # Defined dataset is processed here to be available for the UI application and further operations.
 coco_loader, dataset_id = loader.from_coco(
-    f"{dataset_path}/_annotations.coco.json",
+    f"{dataset_path}/train/_annotations.coco.json",
     input_images_folder="./"
 )
 
