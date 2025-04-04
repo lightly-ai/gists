@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Check if both parameters are provided
-if [ $# -ne 2 ]; then
-    echo "Usage: $0 <dataset_url> <target_folder>"
+# Check if required parameters are provided
+if [ $# -lt 2 ]; then
+    echo "Usage: $0 <dataset_url> <target_folder> [dataset_type]"
+    echo "       dataset_type is optional and defaults to YOLO"
     exit 1
 fi
 
