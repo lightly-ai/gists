@@ -1,14 +1,16 @@
 #!/bin/bash
 
-# Check if all parameters are provided
-if [ $# -ne 3 ]; then
-    echo "Usage: $0 <dataset_url> <target_folder> <dataset_type>"
+# Check if required parameters are provided
+if [ $# -lt 2 ]; then
+    echo "Usage: $0 <dataset_url> <target_folder> [dataset_type]"
+    echo "       dataset_type is optional and defaults to YOLO"
     exit 1
 fi
 
 DATASET_URL=$1
 TARGET_FOLDER=$2
-DATASET_TYPE=$3
+# Set default dataset type to YOLO if not provided
+DATASET_TYPE=${3:-YOLO}
 
 # Create target directory if it doesn't exist
 mkdir -p "$TARGET_FOLDER"
