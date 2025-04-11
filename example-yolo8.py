@@ -1,5 +1,3 @@
-import os
-
 from lightly_purple import DatasetLoader
 
 # Create a DatasetLoader instance
