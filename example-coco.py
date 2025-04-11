@@ -6,7 +6,7 @@ from lightly_purple import DatasetLoader
 loader = DatasetLoader()
 
 # Define the path to the dataset
-# dataset is folder containing images and _annotations.coco.json
+# Dataset is folder containing images and _annotations.coco.json
 # It can be an absolute path or a relative.
 dataset_path = os.getenv("DATASET_PATH")
 
@@ -16,7 +16,8 @@ dataset_path = os.getenv("DATASET_PATH")
 # Defined dataset is processed here to be available for the UI application.
 loader.from_coco_instance_segmentations(
     f"{dataset_path}/_annotations.coco.json",
-    dataset_path
+    dataset_path,
 )
 
+# We start the UI application
 loader.launch()
