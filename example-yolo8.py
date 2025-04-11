@@ -5,13 +5,13 @@ from lightly_purple import DatasetLoader
 # Create a DatasetLoader instance
 loader = DatasetLoader()
 
-# Define the path to the dataset (folder containing data.yaml)
-dataset_path = os.getenv("DATASET_PATH")
-
-# Load YOLO dataset using data.yaml path
+# We point to the yaml file describing the dataset
+# and the input images subfolder.
+# We use train subfolder.
 loader.from_yolo(
-    f"{dataset_path}/data.yaml",
-    input_split="train",
+    "dataset/data.yaml",
+    "train",
 )
 
+# We start the UI application
 loader.launch()
