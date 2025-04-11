@@ -14,7 +14,7 @@ dataset_path = os.getenv("DATASET_PATH")
 # We point to the annotations json file and the input images folder.
 
 # Defined dataset is processed here to be available for the UI application.
-loader.from_coco(
+loader.from_coco_instance_segmentations(
     f"{dataset_path}/_annotations.coco.json",
     dataset_path
 )

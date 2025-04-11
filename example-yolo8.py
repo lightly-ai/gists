@@ -9,7 +9,7 @@ loader = DatasetLoader()
 dataset_path = os.getenv("DATASET_PATH")
 
 # Load YOLO dataset using data.yaml path
-yolo_loader, dataset_id = loader.from_yolo(
+loader.from_yolo(
     f"{dataset_path}/data.yaml",
     input_split="train",
 )
