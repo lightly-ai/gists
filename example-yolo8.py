@@ -8,7 +8,7 @@ loader = DatasetLoader()
 # and the input images subfolder.
 # We use train subfolder.
 loader.from_yolo(
-    data_yaml_path="dataset/data.yaml",
+    data_yaml_path="datasets/example-yolo/data.yaml",
     input_split="train",
 )
 
